@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "HpStarView"
-spec.version      = "0.0.1"
+spec.version      = "0.0.2"
 spec.summary      = "HpStarView for iOS"
 spec.description  = "A simple and easy to use and powerful star rating or display framework with cocoapod support."
 

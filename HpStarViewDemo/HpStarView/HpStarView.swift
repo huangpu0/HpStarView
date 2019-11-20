@@ -27,11 +27,11 @@ public class HpStarView: UIView {
     }
     
     /// 滑动,defualt is false
-    public var userPanEnabled:Bool = false{
+    fileprivate var userPanEnabled:Bool = false{
         didSet{
             if userPanEnabled {
                 let pan = UIPanGestureRecognizer(target: self,action: #selector(starViewPanGes(_:)))
-                addGestureRecognizer(pan)
+               addGestureRecognizer(pan)
             }
         }
     }
@@ -138,7 +138,7 @@ public class HpStarView: UIView {
     
     //MARK: - 手势交互
     @objc func starViewPanGes(_ recognizer:UIPanGestureRecognizer) -> () {
-        
+
         var OffX:CGFloat = 0
         if recognizer.state == .began{
             OffX = recognizer.location(in: self).x
