@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F6A2502C2384E3CA007496CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2502B2384E3CA007496CE /* AppDelegate.swift */; };
-		F6A2502E2384E3CA007496CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2502D2384E3CA007496CE /* SceneDelegate.swift */; };
 		F6A250302384E3CA007496CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2502F2384E3CA007496CE /* ViewController.swift */; };
 		F6A250332384E3CA007496CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A250312384E3CA007496CE /* Main.storyboard */; };
 		F6A250352384E3CC007496CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A250342384E3CC007496CE /* Assets.xcassets */; };
 		F6A250382384E3CC007496CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A250362384E3CC007496CE /* LaunchScreen.storyboard */; };
 		F6A250432384E3CC007496CE /* HpStarViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A250422384E3CC007496CE /* HpStarViewDemoTests.swift */; };
 		F6A2504E2384E3CC007496CE /* HpStarViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2504D2384E3CC007496CE /* HpStarViewDemoUITests.swift */; };
+		F6A2505E2384E49F007496CE /* HpStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A2505C2384E49F007496CE /* HpStarView.swift */; };
+		F6A2505F2384E49F007496CE /* HpStar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F6A2505D2384E49F007496CE /* HpStar.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +38,18 @@
 /* Begin PBXFileReference section */
 		F6A250282384E3CA007496CE /* HpStarViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HpStarViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A2502B2384E3CA007496CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6A2502D2384E3CA007496CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6A2502F2384E3CA007496CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6A250322384E3CA007496CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6A250342384E3CC007496CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A250372384E3CC007496CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F6A250392384E3CC007496CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6A2503E2384E3CC007496CE /* HpStarViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HpStarViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A250422384E3CC007496CE /* HpStarViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HpStarViewDemoTests.swift; sourceTree = "<group>"; };
 		F6A250442384E3CC007496CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6A250492384E3CC007496CE /* HpStarViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HpStarViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A2504D2384E3CC007496CE /* HpStarViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HpStarViewDemoUITests.swift; sourceTree = "<group>"; };
 		F6A2504F2384E3CC007496CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A2505C2384E49F007496CE /* HpStarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HpStarView.swift; sourceTree = "<group>"; };
+		F6A2505D2384E49F007496CE /* HpStar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HpStar.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +100,12 @@
 		F6A2502A2384E3CA007496CE /* HpStarViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F6A2505B2384E49F007496CE /* HpStarView */,
 				F6A2502B2384E3CA007496CE /* AppDelegate.swift */,
-				F6A2502D2384E3CA007496CE /* SceneDelegate.swift */,
 				F6A2502F2384E3CA007496CE /* ViewController.swift */,
 				F6A250312384E3CA007496CE /* Main.storyboard */,
 				F6A250342384E3CC007496CE /* Assets.xcassets */,
 				F6A250362384E3CC007496CE /* LaunchScreen.storyboard */,
-				F6A250392384E3CC007496CE /* Info.plist */,
 			);
 			path = HpStarViewDemo;
 			sourceTree = "<group>";
@@ -126,6 +126,15 @@
 				F6A2504F2384E3CC007496CE /* Info.plist */,
 			);
 			path = HpStarViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		F6A2505B2384E49F007496CE /* HpStarView */ = {
+			isa = PBXGroup;
+			children = (
+				F6A2505C2384E49F007496CE /* HpStarView.swift */,
+				F6A2505D2384E49F007496CE /* HpStar.bundle */,
+			);
+			path = HpStarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +244,7 @@
 				F6A250382384E3CC007496CE /* LaunchScreen.storyboard in Resources */,
 				F6A250352384E3CC007496CE /* Assets.xcassets in Resources */,
 				F6A250332384E3CA007496CE /* Main.storyboard in Resources */,
+				F6A2505F2384E49F007496CE /* HpStar.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A250302384E3CA007496CE /* ViewController.swift in Sources */,
+				F6A2505E2384E49F007496CE /* HpStarView.swift in Sources */,
 				F6A2502C2384E3CA007496CE /* AppDelegate.swift in Sources */,
-				F6A2502E2384E3CA007496CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
