@@ -17,7 +17,7 @@ import UIKit
 public class HpStarView: UIView {
     
     /// 代理
-    weak var delegate: HpStarViewDelegate?
+    public weak var delegate: HpStarViewDelegate?
     
     /// 整星，defualt is true
     public var integerStar:Bool = true {
