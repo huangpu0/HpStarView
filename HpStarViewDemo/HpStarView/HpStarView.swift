@@ -46,6 +46,26 @@ public class HpStarView: UIView {
         }
     }
     
+    //未点亮星、点亮的星
+    public var isNorImage  : String?{
+        didSet {
+            starBackgroundView?.removeFromSuperview()
+            starBackgroundView = starViewWithImageName(isNorImage!)
+            addSubview(starBackgroundView!)
+            sendSubviewToBack(starBackgroundView!)
+        }
+    }
+    public var isLightImage: String?{
+        didSet {
+            starForegroundView?.removeFromSuperview()
+            starForegroundView = starViewWithImageName(isLightImage!)
+            addSubview(starForegroundView!)
+            bringSubviewToFront(starForegroundView!)
+            showStarRate()
+        }
+    }
+    
+    
     fileprivate var starForegroundView: UIView?
     public var _currentStarCount:Float = 0//当前的星星数量，defualt is 0
     public var  currentStarCount:Float{
@@ -84,11 +104,11 @@ public class HpStarView: UIView {
         let tapGes = UITapGestureRecognizer(target: self,action: #selector(starViewTapGes(_:)))
         addGestureRecognizer(tapGes)
         
-        starForegroundView = starViewWithImageName("star_nor@2x")
-        addSubview(starForegroundView!)
-        
-        starBackgroundView = starViewWithImageName("star_pre@2x")
+        starBackgroundView = starViewWithImageName("star_nor@2x")
         addSubview(starBackgroundView!)
+        
+        starForegroundView = starViewWithImageName("star_pre@2x")
+        addSubview(starForegroundView!)
         
         showStarRate()
     }
@@ -111,7 +131,7 @@ public class HpStarView: UIView {
             let imageView = UIImageView.init(frame: CGRect(x:CGFloat(index) * width,y: 0,width:width,height:bounds.size.height))
             let path = getBundle().path(forResource: imageName, ofType: "png")
             
-            imageView.image = UIImage.init(contentsOfFile: path!)
+            imageView.image = (isNorImage != nil || isLightImage != nil) ? UIImage.init(named: imageName):UIImage.init(contentsOfFile: path!)
             imageView.contentMode = .scaleAspectFit;
             starView.addSubview(imageView)
         }
@@ -126,12 +146,12 @@ public class HpStarView: UIView {
             if !self.integerStar{
                 
                 /// 支持非整星评分
-                self.starBackgroundView?.frame = CGRect(x: 0,y: 0,width: self.bounds.width / CGFloat(self.numberOfStars) * CGFloat(self.currentStarCount),height: self.bounds.height)
+                self.starForegroundView?.frame = CGRect(x: 0,y: 0,width: self.bounds.width / CGFloat(self.numberOfStars) * CGFloat(self.currentStarCount),height: self.bounds.height)
                 
             }else{
                 
                 /// 只支持整星评分
-                self.starBackgroundView?.frame = CGRect(x: 0,y: 0,width: self.bounds.width / CGFloat(self.numberOfStars) * CGFloat(ceil(self.currentStarCount)) ,height: self.bounds.height)
+                self.starForegroundView?.frame = CGRect(x: 0,y: 0,width: self.bounds.width / CGFloat(self.numberOfStars) * CGFloat(ceil(self.currentStarCount)) ,height: self.bounds.height)
             }
         })
     }
